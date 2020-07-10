@@ -62,4 +62,4 @@ You should see this in terminal
 
 9. Click on `Fetch Data` button. The data should be populated in the table.
 
-10 Thats all Folks.
+10. Thats all Folks.
