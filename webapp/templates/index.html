@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Meter Usage</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+	<header>
+		<img class="logo" src="https://spectral.energy/wp-content/uploads/2017/01/center2-yellow-white.png" alt="Smart Energy Solutions">
+		<span class="title">Meter Usage</span>
+	</header>
+  
+ 	<content>
+	  	<div class="container">
+	  		<span class="fetch-data-cta">
+	  			<a class="fetch-data-btn" href="#">
+	  			<span class="box">Fetch Data &nbsp;
+	  				<img id="ico-downloading" class="" src="/static/download.png">
+	  				<img id="ico-loading" class="hidden" src="/static/blue_loading.gif">
+	  			</span>
+	  		</a>
+	  		</span>
+			<table id="meter-usage-data-table" border="0">
+				<thead>
+				  	<tr>
+				  		<th>Timestamp</th>
+				  		<th>Usage (In units)</th>
+				  	</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="2">
+							
+						</td>
+					</tr>
+				</tbody>
+			  	
+		  </table>
+		</div>
+		<div class="info-objects hidden">
+			<div class="info-object-container">
+				<span id="info-info" class="info box">
+					<img src="/static/info.webp"/> 
+					&nbsp; Click on "Fetch Data" button above to populate this list
+				</span>
+			</div>
+			<div class="error-object-container">
+				<span id="info-error" class="info box">
+					<img src="/static/error.webp"/> 
+					&nbsp; Error occured! Please try again.
+				</span>
+			</div>
+		</div>
+	</content>
+	<span title="scroll top" class="move-top"><img width="64" src="/static/move-top.png"></span>
+	<script type="text/javascript" src="/static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Request {
+}
+
+message Record {
+    message ListItems {
+        string time = 1;
+        float meterusage = 2;
+    }
+
+    repeated ListItems value = 1;
+}
+
+service MeterUsage {
+    rpc MeterUsageJson(Request) returns (Record) {};
+}

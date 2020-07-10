@@ -1,0 +1,122 @@
+body {
+	font-family: "Lato",sans-serif;
+	margin:0;
+}
+header {
+	height: 6em;
+	width: 100%;
+	display: block;
+	background-color: hsl(0, 0%, 15%);
+	position: fixed;
+}
+header img.logo {
+	float: left;
+	height: 4em;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+header span.title {
+	float: right;
+	line-height: 4em;
+	margin-right: 1em;
+	font-size: 24px;
+	font-weight: 800;
+	color: #ffcc00;
+	text-transform: uppercase;
+}
+content{
+	background-color: hsl(0, 0%, 100%);
+}
+content div.container {
+	text-align: center;
+	padding-top: 7em;
+}
+content div.container table{
+	width: 50%;
+	margin: auto;
+}
+
+content .fetch-data-cta {
+  height: 3em;
+	display: inline-block;
+}
+
+content div.container .fetch-data-btn{  
+  padding: 0.5em 2em;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+content div.container .fetch-data-cta span.box:hover{  
+  padding: 0.5em 2em;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffcc00;
+  background: hsl(0, 0%, 15%);
+}
+
+content #meter-usage-data-table thead {
+	background-color: #ffcc00;
+	color: hsl(0, 0%, 15%);
+	text-transform: uppercase;
+}
+content #meter-usage-data-table thead tr {
+	height: 3em;
+}
+content #meter-usage-data-table tbody tr {
+	height: 2em;
+}
+content #meter-usage-data-table tbody{
+	font-family: monospace;
+}
+content #meter-usage-data-table tbody tr:nth-child(even) {background: #CCC}
+content #meter-usage-data-table tbody tr:nth-child(odd) {background: #FFF}
+.box {
+   padding: 0.5em 2em;
+   border: 2px solid black;
+   border-radius: 1em;
+   display: flex;
+   align-items:center;
+
+}
+.box img {
+	width: 2em;
+}
+.hidden {
+	display: none !important;
+	height: 0;
+	width: 0;
+}
+.move-top{
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	cursor: pointer;
+	border-radius: 50%;
+	font-size: 0;
+}
+.move-top:hover{
+	background-color: #ffcc00;
+}
+
+span#info-info {
+   padding: 0.5em 2em;
+   border: 2px solid #2a7eb6;
+   border-radius: 1em;
+   display: flex;
+   align-items:center;
+   margin: 2em;
+   font-family: "Lato",sans-serif;
+   color: #2a7eb6;;
+}
+
+span#info-error {
+   padding: 0.5em 2em;
+   border: 2px solid #d72828;
+   border-radius: 1em;
+   display: flex;
+   align-items:center;
+   margin: 2em;
+   font-family: "Lato",sans-serif;
+   color: #d72828;
+}
