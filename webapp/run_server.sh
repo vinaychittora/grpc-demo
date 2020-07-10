@@ -1,3 +1,3 @@
 #!/bin/bash
 
-PYTHONPATH=../ python3 app.py
+FLASK_ENV=development PYTHONPATH=../ python3 app.py
