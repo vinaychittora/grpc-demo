@@ -62,4 +62,16 @@ You should see this in terminal
 
 9. Click on `Fetch Data` button. The data should be populated in the table.
 
-10. Thats all Folks.
+
+### Architecture and Data Flow:
+----
+1. The frontend makes and XHR GET request to Flask webserver on `/usage` endpoint.
+2. `Flask` calls the `client` that executes `run` method. 
+3. `Client` is wrapped around a Service Wrapper that makes a request to gRPC server.
+4. `gRPC Server` validates the request and read CSV file.
+5. `gRPC Server` converts the csv into json and returns a `protobuf` with data to client.
+6. `Client` received protobuf from server and pass it to the `Flask webserver`.
+7. `Flask webserver` returns the content received from `Client` to the frontend as json.
+8. `Frontend` renders the json in table via a jsvascript method `render_data_in_table`
+
+# Thats all Folks.
