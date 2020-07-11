@@ -21,7 +21,15 @@ class MeterUsageServicer(meterusage_pb2_grpc.MeterUsageServicer):
 
     # Entrypoint for MeterUsage services.
     def MeterUsageJson(self, request, context):
+        start = time.time()
+        print("." * 80)
+        print("Received a request")
+        print("Invocation MetaData: {}".format(context.invocation_metadata()))
+        print("Peers: {}".format(context.peer()))
+        print("Fetching data and parsing it to protobuf")
         response = meterusage_pb2.Record(value=self.get_data())
+        print("Request Completed in: {}".format(time.time() - start))
+        print("." * 80)
         return response
 
 
