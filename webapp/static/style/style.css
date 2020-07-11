@@ -66,6 +66,10 @@ content #meter-usage-data-table thead tr {
 content #meter-usage-data-table tbody tr {
 	height: 2em;
 }
+content #meter-usage-data-table tbody tr:hover {
+	background-color:hsl(0, 0%, 15%) !important;
+	color: #ffcc00;
+}
 content #meter-usage-data-table tbody{
 	font-family: monospace;
 }
@@ -98,6 +102,10 @@ content #meter-usage-data-table tbody tr:nth-child(odd) {background: #FFF}
 .move-top:hover{
 	background-color: #ffcc00;
 }
+.info-container {
+	max-width: 50%;
+    margin: auto;
+}
 
 span#info-info {
    padding: 0.5em 2em;
@@ -105,7 +113,7 @@ span#info-info {
    border-radius: 1em;
    display: flex;
    align-items:center;
-   margin: 2em;
+   margin: 1em 2em 2em 2em;
    font-family: "Lato",sans-serif;
    color: #2a7eb6;;
 }
@@ -116,7 +124,18 @@ span#info-error {
    border-radius: 1em;
    display: flex;
    align-items:center;
-   margin: 2em;
+   margin: 1em 2em 2em 2em;
    font-family: "Lato",sans-serif;
    color: #d72828;
+}
+
+
+@media only screen and (max-width: 768px) {
+ 	content div.container table{
+		width: 90%;
+	} 
+	.info-container {
+		max-width: 90%;
+	}
+
 }

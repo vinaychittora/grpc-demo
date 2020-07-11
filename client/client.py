@@ -9,12 +9,15 @@ import meterusage_pb2_grpc
 
 def run():
     # Create a service Client using the client wrapper.
-    meterusage_client = ServiceClient(
-        meterusage_pb2_grpc,
-        'MeterUsageStub',
-        'localhost',
-        50051
-    )
+    try:
+        meterusage_client = ServiceClient(
+            meterusage_pb2_grpc,
+            'MeterUsageStub',
+            'localhost',
+            50051
+        )
+    except Exception as e:
+        raise e
 
     # Create request object.
     request = meterusage_pb2.Request()

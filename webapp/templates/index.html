@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Meter Usage</title>
-  <link rel="stylesheet" href="/static/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/static/style/style.css">
+  <script src="/static/js/jquery.min.js"></script>
   
 </head>
 
 
 <body>
 	<header>
-		<img class="logo" src="https://spectral.energy/wp-content/uploads/2017/01/center2-yellow-white.png" alt="Smart Energy Solutions">
+		<img class="logo" src="/static/imgs/logo.png" alt="Smart Energy Solutions">
 		<span class="title">Meter Usage</span>
 	</header>
   
@@ -22,12 +22,14 @@
 	  	<div class="container">
 	  		<span class="fetch-data-cta">
 	  			<a class="fetch-data-btn" href="#">
-	  			<span class="box">Fetch Data &nbsp;
-	  				<img id="ico-downloading" class="" src="/static/download.png">
-	  				<img id="ico-loading" class="hidden" src="/static/blue_loading.gif">
-	  			</span>
-	  		</a>
+		  			<span class="box">Fetch Data &nbsp;
+		  				<img id="ico-downloading" class="" src="/static/imgs/download.png">
+		  				<img id="ico-loading" class="hidden" src="/static/imgs/blue_loading.gif">
+		  			</span>
+	  			</a>
 	  		</span>
+	  		<div class="info-container">
+	  		</div>
 			<table id="meter-usage-data-table" border="0">
 				<thead>
 				  	<tr>
@@ -48,20 +50,20 @@
 		<div class="info-objects hidden">
 			<div class="info-object-container">
 				<span id="info-info" class="info box">
-					<img src="/static/info.webp"/> 
-					&nbsp; Click on "Fetch Data" button above to populate this list
+					<img src="/static/imgs/info.webp"/> 
+					&nbsp; Click on "Fetch Data" button above to populate this list below.
 				</span>
 			</div>
 			<div class="error-object-container">
 				<span id="info-error" class="info box">
-					<img src="/static/error.webp"/> 
-					&nbsp; Error occured! Please try again.
+					<img src="/static/imgs/error.webp"/> 
+					<span class="error-code"></span>
 				</span>
 			</div>
 		</div>
 	</content>
-	<span title="scroll top" class="move-top"><img width="64" src="/static/move-top.png"></span>
-	<script type="text/javascript" src="/static/script.js"></script>
+	<span title="scroll top" class="move-top"><img width="64" src="/static/imgs/move-top.png"></span>
+	<script type="text/javascript" src="/static/js/script.js"></script>
 </body>
 
 </html>

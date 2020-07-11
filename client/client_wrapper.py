@@ -9,9 +9,13 @@ class ServiceClient:
     def __init__(self, service_module, stub_name, host, port, timeout=10):
         channel = grpc.insecure_channel('{0}:{1}'.format(host, port))
         try:
-            grpc.channel_ready_future(channel).result(timeout=10)
+            grpc.channel_ready_future(channel).result(timeout=timeout)
         except grpc.FutureTimeoutError as e:
-            print('Error connecting to server!')
+            raise e
+        except Exception as e:
+            print("Error: {}".format(e))
+            # In case of any other error, simply raise it
+            # it'll be caught on webserver side.
             raise e
         self.stub = getattr(service_module, stub_name)(channel)
         self.timeout = timeout

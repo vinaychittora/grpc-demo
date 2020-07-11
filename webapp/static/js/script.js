@@ -14,11 +14,12 @@ $("a.fetch-data-btn").bind('click', function(e){
 		type: "GET",
 		success: function(data){
 			render_data_in_table( data['value'] );
+			show_info();
 		},
 		error: function(err){
 			console.log(err);
 			toggle_loader();
-			show_error();
+			show_error(err.status ,err.responseText);
 		}
 
 	});
@@ -45,19 +46,21 @@ function render_data_in_table(data){
 
 // to show Info notification.
 function show_info(){
-	$('#meter-usage-data-table tbody').empty();
-	$('#meter-usage-data-table tbody').append(
-		'<tr><td colspan="2">'+$(".info-object-container").html()+'</td></tr>'
+	$('.info-container').empty();
+	$('.info-container').append(
+		$(".info-object-container").html()
 	)
-	
 }
 
 // to show Error notification.
-function show_error(){
-	$('#meter-usage-data-table tbody').empty();
-	$('#meter-usage-data-table tbody').append(
-		'<tr><td colspan="2">'+$(".error-object-container").html()+'</td></tr>'
+function show_error(code, err){
+	$('.info-container').empty();
+	$('.info-container').append(
+		$(".error-object-container").html()
 	)
+	$(".info-container .error-code").html(
+		"&nbsp;Error! Server responded with: `"+err+"`, Status: `"+code+"`"
+	);
 }
 
 // to show/hide loader during XHR.
