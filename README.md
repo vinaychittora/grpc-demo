@@ -1,4 +1,4 @@
-# A demo gRPC server + client + webapp
+# Demo: gRPC Server + Client + WebApp
 
 ### Setup Development Environment
 ----
